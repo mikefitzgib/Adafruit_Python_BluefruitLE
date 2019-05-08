@@ -15,9 +15,9 @@ import Adafruit_BluefruitLE
 #logging.basicConfig(level=logging.DEBUG)
 
 # Define service and characteristic UUIDs used by the UART service.
-UART_SERVICE_UUID = uuid.UUID('6E400001-B5A3-F393-E0A9-E50E24DCCA9E')
-TX_CHAR_UUID      = uuid.UUID('6E400002-B5A3-F393-E0A9-E50E24DCCA9E')
-RX_CHAR_UUID      = uuid.UUID('6E400003-B5A3-F393-E0A9-E50E24DCCA9E')
+UART_SERVICE_UUID = uuid.UUID('0000ae41-0000-1000-8000-00805f9b34fb')
+TX_CHAR_UUID      = uuid.UUID('0000fff3-0000-1000-8000-00805f9b34fb')
+RX_CHAR_UUID      = uuid.UUID('0000fff4-0000-1000-8000-00805f9b34fb')
 
 # Get the BLE provider for the current platform.
 ble = Adafruit_BluefruitLE.get_provider()
