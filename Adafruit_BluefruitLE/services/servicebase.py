@@ -22,6 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 from ..config import TIMEOUT_SEC
+from ..config import NAME
 from ..platform import get_provider
 
 
@@ -35,12 +36,12 @@ class ServiceBase(object):
     """
 
     @classmethod
-    def find_device(cls, timeout_sec=TIMEOUT_SEC):
+    def find_device(cls, name=NAME, timeout_sec=TIMEOUT_SEC):
         """Find the first available device that supports this service and return
         it, or None if no device is found.  Will wait for up to timeout_sec
         seconds to find the device.
         """
-        return get_provider().find_device(service_uuids=cls.ADVERTISED, timeout_sec=timeout_sec)
+        return get_provider().find_device(service_uuids=cls.ADVERTISED, name=name, timeout_sec=timeout_sec)
 
     @classmethod
     def find_devices(cls):

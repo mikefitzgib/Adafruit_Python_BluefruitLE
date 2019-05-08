@@ -25,3 +25,4 @@
 # Default timeout for an action which waits for something to happen, like
 # connecting or discovering services.
 TIMEOUT_SEC = 60
+NAME = 't:iny iTool ***063'
